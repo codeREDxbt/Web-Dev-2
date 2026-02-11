@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f8ff;
+    color: #222;
+}
+
+h1 {
+    text-align: center;
+    color: #0b5ed7;
+    margin-bottom: 20px;
+}
+
+#main-event-container {
+    max-width: 900px;
+    margin: auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    color: #0b5ed7;
+}
+
+input,
+select,
+textarea {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #cdd9ed;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0b5ed7;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #084298;
+}
+
+h3 {
+    color: #0b5ed7;
+    margin-bottom: 10px;
+}
+
+#alleventscontainer {
+    margin-top: 10px;
+    padding: 10px;
+    background: #f4f8ff;
+    border-radius: 6px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+#alleventscontainer h4 {
+    margin-bottom: 5px;
+}
+
+#alleventscontainer p {
+    margin-top: 5px;
+}
+
+#alleventscontainer span {
+    display: block;
+    font-size: 14px;
+    margin-top: 2px;
+    font-weight: bold;
+}
+
+#clear-event-btn {
+    background-color: #db3444;
+}
+
+#clear-event-btn:hover {
+    background-color: #b02a37;
+}
+
+#add-sample-btn {
+    background-color: #0d6efd;
+}
+
+#add-sample-btn:hover {
+    background-color: #084298;
+}
+
+.close-btn {
+    float: right;
+    background-color: #dc3545;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.close-btn:hover {
+    background-color: #b02a37;
+}
