@@ -12,7 +12,7 @@ body {
 
 h1 {
     text-align: center;
-    color: #0b5ed7;
+    color: #d70b0b;
     margin-bottom: 20px;
 }
 
@@ -36,7 +36,7 @@ form {
 
 label {
     font-weight: bold;
-    color: #0b5ed7;
+    color: #d70b0b;
 }
 
 input,
@@ -57,18 +57,18 @@ button {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #0b5ed7;
+    background-color: #d70b0b;
     color: white;
     cursor: pointer;
     font-weight: bold;
 }
 
 button:hover {
-    background-color: #084298;
+    background-color: #c30707;
 }
 
 h3 {
-    color: #0b5ed7;
+    color: #d70b0b;
     margin-bottom: 10px;
 }
 
@@ -98,12 +98,11 @@ h3 {
 }
 
 #clear-event-btn {
-    background-color: #db3444;
+    background-color: #3f34db;
 }
 
 #clear-event-btn:hover {
-    background-color: #b02a37;
-}
+    background-color: #3f34db;
 
 #add-sample-btn {
     background-color: #0d6efd;
