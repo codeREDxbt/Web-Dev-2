@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Weather Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="app-header">
+        <h1>🌤️ Async Weather Tracker</h1>
+    </header>
+
+    <main class="app-shell">
+        <section class="top-grid">
+            <article class="card search-card">
+                <h2>Search City</h2>
+                <form id="weatherform" class="search-form" novalidate>
+                    <input type="text" id="city" placeholder="Delhi, London" autocomplete="off">
+                    <button type="submit">Search</button>
+                </form>
+
+                <h2 class="history-title">Search History</h2>
+                <div id="history" class="history" aria-live="polite"></div>
+            </article>
+
+            <article class="card weather-card">
+                <h2>Weather Info</h2>
+                <p id="weather-error" class="weather-error" hidden></p>
+                <div id="weather-content" class="weather-content" aria-live="polite"></div>
+            </article>
+        </section>
+
+        <section class="card console-card">
+            <h2>Console &ndash; Event Loop</h2>
+            <div id="console-panel" class="console-panel" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
