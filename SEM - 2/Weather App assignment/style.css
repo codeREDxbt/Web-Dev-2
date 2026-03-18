@@ -1,0 +1,266 @@
+:root {
+	--bg-top: #1f2668;
+	--bg-bottom: #1d235f;
+	--card-bg: #e9e9ea;
+	--ink: #111111;
+	--title: #b8d8e8;
+	--accent: #f47735;
+	--console-bg: #1a2266;
+	--border-soft: #9fd8f2;
+	--error: #ff1d1d;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	color: var(--ink);
+	min-height: 100vh;
+	background: linear-gradient(to bottom, var(--bg-top) 0 72%, var(--bg-bottom) 72% 100%);
+}
+
+.app-header {
+	text-align: center;
+	padding: 12px 16px 8px;
+}
+
+.app-header h1 {
+	margin: 0;
+	font-size: clamp(34px, 4vw, 50px);
+	color: var(--title);
+	font-weight: 700;
+	letter-spacing: 0.2px;
+}
+
+.app-shell {
+	width: min(1260px, 92vw);
+	margin: 10px auto 0;
+	padding-bottom: 42px;
+}
+
+.top-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.card {
+	background: var(--card-bg);
+	border-radius: 14px;
+	padding: 20px;
+}
+
+h2 {
+	margin: 0;
+	font-size: clamp(22px, 2.2vw, 39px);
+	font-weight: 700;
+}
+
+.search-form {
+	margin-top: 12px;
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 132px;
+	gap: 12px;
+}
+
+#city {
+	height: 56px;
+	font-size: 30px;
+	border-radius: 8px;
+	border: 3px solid var(--border-soft);
+	padding: 6px 14px;
+	outline: none;
+	background: #efefef;
+}
+
+#city::placeholder {
+	color: #888888;
+}
+
+.search-form button {
+	border: 0;
+	background: var(--accent);
+	color: #ffffff;
+	border-radius: 8px;
+	font-size: 31px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.search-form button:hover {
+	filter: brightness(0.95);
+}
+
+.history-title {
+	margin-top: 22px;
+}
+
+.history {
+	margin-top: 12px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	min-height: 46px;
+}
+
+.history button {
+	border: 0;
+	background: var(--accent);
+	color: #fff;
+	border-radius: 22px;
+	padding: 8px 18px;
+	font-size: 27px;
+	cursor: pointer;
+}
+
+.weather-error {
+	margin: 10px 0 0;
+	font-size: 36px;
+	color: var(--error);
+}
+
+.weather-content {
+	margin-top: 12px;
+	display: grid;
+	gap: 8px;
+}
+
+.weather-row {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	align-items: center;
+	border-left: 7px solid var(--accent);
+	background: #ececec;
+	padding: 10px 14px;
+	min-height: 56px;
+	font-size: 38px;
+}
+
+.weather-row span:last-child {
+	font-weight: 500;
+}
+
+.console-card {
+	margin-top: 20px;
+}
+
+.console-panel {
+	margin-top: 12px;
+	background: var(--console-bg);
+	color: #a7d3e8;
+	border-radius: 12px;
+	min-height: 92px;
+	padding: 12px 14px;
+	font-size: clamp(20px, 1.45vw, 28px);
+	font-family: Consolas, "Courier New", monospace;
+	line-height: 1.35;
+}
+
+.log-line {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	border-left: 5px solid var(--accent);
+	padding-left: 8px;
+}
+
+.log-index {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 18px;
+	height: 18px;
+	border-radius: 3px;
+	background: #7694b8;
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: 700;
+}
+
+@media (max-width: 1200px) {
+	h2 {
+		font-size: 28px;
+	}
+
+	.app-header h1 {
+		font-size: 54px;
+	}
+
+	#city,
+	.search-form button {
+		font-size: 24px;
+	}
+
+	.weather-row,
+	.weather-error {
+		font-size: 28px;
+	}
+
+	.history button {
+		font-size: 22px;
+	}
+}
+
+@media (max-width: 900px) {
+	.top-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.app-header h1 {
+		font-size: 42px;
+	}
+
+	#city {
+		height: 50px;
+	}
+
+	.search-form button {
+		font-size: 22px;
+	}
+
+	.weather-row,
+	.weather-error {
+		font-size: 24px;
+	}
+
+	.history button {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 640px) {
+	.app-shell {
+		width: min(98vw, 98vw);
+	}
+
+	.card {
+		padding: 16px;
+	}
+
+	.search-form {
+		grid-template-columns: 1fr;
+	}
+
+	.search-form button {
+		height: 48px;
+	}
+
+	h2 {
+		font-size: 24px;
+	}
+
+	.app-header h1 {
+		font-size: 34px;
+	}
+
+	#city,
+	.history button,
+	.weather-row,
+	.weather-error,
+	.console-panel {
+		font-size: 18px;
+	}
+}
